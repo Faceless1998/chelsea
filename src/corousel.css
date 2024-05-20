@@ -1,0 +1,39 @@
+.thumb{
+    height: 100px;
+}
+
+.thumb.active{
+    border: 1px solid blue;
+}
+
+.thumbnails{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.carousel-container{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    position: relative;
+}
+
+.prev,.next{
+    position: absolute;
+    bottom: 50px;
+    transform: translateY(50%);
+    background-color: white;
+    border: none;
+    font-size: 20px;
+    color: blue;
+    cursor: pointer;
+}
+.prev{
+    left: 50px;
+}
+
+.next{
+    right: 50px;
+}
+

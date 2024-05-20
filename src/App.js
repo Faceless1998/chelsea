@@ -1,63 +1,62 @@
-import "./App.css";
 import { useState } from "react";
-import IMG from "./assets/Main_Website_Badge_-_Colour.webp"
+import "./App.css";
+import Carousel from "./Carousel";
+
 function App() {
-const [isLatestOpen, setIsLatestOpen] = useState(false)
-const [isWatchOpen, setIsWatchOpen] = useState(false)
+  const [isHomeOpen, setIsHomeOpen] = useState(true);
+  const [isAwayOpen, setIsAwayOpen] = useState(false);
+  const [isThirdOpen, setIsThirdOpen] = useState(false);
 
-const toggleDropdownLatest = () => {
-  setIsLatestOpen(!isLatestOpen);
-}
+  const handleHomeOpen = () => {
+    setIsHomeOpen(true);
+    setIsAwayOpen(false);
+    setIsThirdOpen(false);
+  };
 
-const toggleWathDropdown = () => {
-  setIsWatchOpen(!isWatchOpen);
-}
+  const handleAwayOpen = () => {
+    setIsHomeOpen(false);
+    setIsAwayOpen(true);
+    setIsThirdOpen(false);
+  };
+
+  const handleThirdOpen = () => {
+    setIsHomeOpen(false);
+    setIsAwayOpen(false);
+    setIsThirdOpen(true);
+  };
+
   return (
     <>
-      <div className="App">
-          <nav className="navbar">
-            <ul className="menu">
-                <li className="menu-item">
-                  <a href="#" className="menu-link"> 
-                  <img src={IMG} alt="chelsea" style={{width:"115px"}} />
-                   </a>
-                </li>
+      <h1 className="title">Create your own</h1>
+      <div className="tab">
+        <div
+          className={`item ${isHomeOpen ? "active" : ""}`}
+          onClick={handleHomeOpen}
+        >
+          Home
+        </div>
+        <div
+          className={`item ${isAwayOpen ? "active" : ""}`}
+          onClick={handleAwayOpen}
+        >
+          Away
+        </div>
+        <div
+          className={`item ${isThirdOpen ? "active" : ""}`}
+          onClick={handleThirdOpen}
+        >
+          Third
+        </div>
+      </div>
 
-                <li className="menu-item" onClick={toggleDropdownLatest}>
-                <a href="#" className="menu-link"> latest </a>
-                
-                </li>
-
-                <li className="menu-item">
-                  <a href="#" className="menu-link"> Watch </a>
-                </li>
-                <li className="menu-item">
-                  <a href="#" className="menu-link"> Man's Team </a>
-                </li>
-
-                <li className="menu-item">
-                  <a href="#" className="menu-link"> Woman's Team </a>
-                </li>
-
-                <li className="menu-item">
-                  <a href="#" className="menu-link"> Tickets & Hospitality </a>
-                </li>
-
-                <li className="menu-item">
-                  <a href="#" className="menu-link"> Shop </a>
-                </li>
-            </ul>
-          </nav>
-
-          {isLatestOpen && (
-            <ul className="dropdown-menu">
-                    <li><a className="dropdown-link" href="#">News</a></li>
-                    <li><a className="dropdown-link" href="#">Interviews & Features</a></li>
-                    <li><a className="dropdown-link" href="#">USA Tour 2024</a></li>
-                    <li><a className="dropdown-link" href="#">Win LJ's Signed Boots!</a></li>
-            </ul>
-          )}
-                
+      <div className="inside-card">
+        <div className="card">
+          {isHomeOpen && <>
+            <Carousel />
+          </>}
+          {isAwayOpen && <></>}
+          {isThirdOpen && <></>}
+        </div>
       </div>
     </>
   );
