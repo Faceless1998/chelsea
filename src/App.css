@@ -48,4 +48,15 @@ body{
   height: 800px;
   background-color: white;
   border-radius: 30px;
+  display:flex;
+  justify-content: center;
+}
+
+.windowsize{
+  width: 600px;
+}
+
+.fonttitle{
+  font-size: 30px;
+  margin-bottom: 20px;
 }

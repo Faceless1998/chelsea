@@ -1,5 +1,5 @@
 .thumb{
-    height: 100px;
+    height: 200px;
 }
 
 .thumb.active{
@@ -17,6 +17,7 @@
     flex-direction: column;
     width: 50%;
     position: relative;
+    align-items: center;
 }
 
 .prev,.next{
@@ -37,3 +38,33 @@
     right: 50px;
 }
 
+.crossed{
+    text-decoration: line-through;
+}
+
+.mysize{
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+}
+
+.radial{
+    padding: 5px 10px;
+    background-color: #F3F5F8;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.radial:hover:not(.crossed){
+    background-color: aqua;
+    border: 1px solid aquamarine;
+}
+
+.carousel-container .main-image img{
+    width: 500px;
+}
+
+.thumbnails{
+    overflow-x: scroll;
+    width: 500px;
+}

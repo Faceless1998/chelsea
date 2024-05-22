@@ -1,15 +1,11 @@
 import React, {useState} from "react";
 import "./corousel.css"
-import IMG1 from "./assets/photo1.webp"
-import IMG2 from "./assets/photo2.webp"
-import IMG3 from "./assets/photo3.webp"
-import IMG4 from "./assets/photo4.webp"
-const Carousel = () =>{
+
+const Carousel = ({images}) =>{
     const [currentIndex,setCurrentIndex] = useState(0);
-    const cards = [IMG1,IMG2,IMG3,IMG4];
     
     const moveCarousel = (direction) =>{
-        const newIndex = (currentIndex + direction + cards.length) % cards.length;
+        const newIndex = (currentIndex + direction + images.length) % images.length;
         setCurrentIndex(newIndex);
     };
 
@@ -18,13 +14,13 @@ const Carousel = () =>{
     };
 
     return(
-        <div className="carousel-container">
+        <div className="carousel-container windowsize">
             <div className="main-image">
-                <img src={cards[currentIndex]} alt={`slide ${currentIndex}`}/>
+                <img src={images[currentIndex]} alt={`slide ${currentIndex}`}/>
             </div>
             <div className="thumbnails">
                 {
-                    cards.map((card,index) =>(
+                    images.map((card,index) =>(
                         <img
                             key={index}
                             src={card}
