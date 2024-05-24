@@ -1,0 +1,45 @@
+.kit-title{
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid black;
+
+}
+
+.kit-title h2{
+    margin-bottom: 10px;
+    font-size: 35px;
+}
+
+.kit-title .sizes ul, .kit-title .badge ul, .name-number ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+.kit-title .sizes li, .badge li, .name-number li{
+    display: inline-block;
+    margin: 5px;
+    padding: 5px 10px;
+    width: 30px;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 20px;
+    background-color: beige;
+}
+
+.kit-title .sizes .avaliable{
+    background-color: #EEF2FD;
+    color: #6258FB;
+    border: 1px solid #675EFB;
+}
+
+.kit-title .sizes .unavaliable{
+    background-color: #F3F5F8;
+    color: #66676A;
+}
+
+.kit-title .badge li, .kit-title .name-number li{
+    background-color: #EEF2FD;
+    color: #6258FB;
+    border: 1px solid #675EFB;
+    width: fit-content;
+}
