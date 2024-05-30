@@ -41,3 +41,7 @@
     border: 1px solid #675EFB;
     width: fit-content;
 }
+
+.items.active{
+    border: 1px solid green;
+}

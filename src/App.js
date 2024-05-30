@@ -23,7 +23,7 @@ const kits = [
       "2XL": false,
       "3XL": false,
     },
-    price:"125",
+    price:125,
     badge:{
       badge1: "None",
       badge2: "Champions League Pack +$25.00",
@@ -48,7 +48,7 @@ const kits = [
       "2XL": false,
       "3XL": false,
     },
-    price:"125",
+    price:125,
     badge:{
       badge1: "None",
       badge2: "Champions League Pack +$25.00",
@@ -73,7 +73,7 @@ const kits = [
       "2XL": false,
       "3XL": false,
     },
-    price:"125",
+    price:125,
     badge:{
       badge1: "None",
       badge2: "Champions League Pack +$25.00",
@@ -89,13 +89,24 @@ const kits = [
 
 function App() {
   const [currentTab, setCurrentTab] = useState("Home");
+  const [selectBadge, setSelectBadge] = useState("None");
+  const [selectNameNumber, setSelectNameNumber] = useState("None");
 
   const handleTabClick = (tab) => {
     setCurrentTab(tab);
   };
 
-  const currentKit = kits.find(kit => kit.name === currentTab)
+  const handleBadgeChange = (badge) =>{
+    setSelectBadge(badge);
+  }
 
+  const handleNameNumberChange = (nameNumber) =>{
+    setSelectNameNumber(nameNumber);
+  } 
+
+  const currentKit = kits.find(kit => kit.name === currentTab)
+  const totalPrice = currentKit.price + (selectBadge === "Champions League Pack +$25.00" ? 25 : selectBadge === "La Liga +$15.00" ? 15 : 0) + (selectNameNumber === "Select Player +$25.00" || selectNameNumber === "Personalize +$25.00" ? 25 : 0 )
+  
   return (
     <>
       <h1 className="title">Create your own</h1>
@@ -117,9 +128,11 @@ function App() {
             name={currentKit.name}
             color={currentKit.color}
             sizes={currentKit.sizes}
-            price={currentKit.price}
+            price={totalPrice}
             badge={currentKit.badge}
             NameNumber={currentKit.NameNumber}
+            onBadgeChange={handleBadgeChange}
+            onNameNumberChange={handleNameNumberChange}
             className="windowsize"          
           />
         </div>

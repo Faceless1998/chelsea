@@ -1,7 +1,17 @@
 import React from "react";
 import "./kittitles.css";
 
-const KitTitles = ({ name, color, sizes, price, badge, NameNumber }) => {
+const KitTitles = ({
+  name,
+  color,
+  sizes,
+  price,
+  badge,
+  NameNumber,
+  onBadgeChange,
+  onNameNumberChange,
+}) => {
+
   return (
     <div className="kit-title">
       <h2>
@@ -25,8 +35,10 @@ const KitTitles = ({ name, color, sizes, price, badge, NameNumber }) => {
       <div className="badge">
         <h3>Badge:</h3>
         <ul>
-          {Object.values(badge).map((badgeOption, index) => (
-            <li key={index}>{badgeOption}</li>
+          {Object.entries(badge).map(([key, badgeOption]) => (
+            <li key={key} onClick={() => onBadgeChange(badgeOption)}  className={`items ${badgeOption ? "active" : ""} ` }>
+              {badgeOption}
+            </li>
           ))}
         </ul>
       </div>
@@ -34,8 +46,10 @@ const KitTitles = ({ name, color, sizes, price, badge, NameNumber }) => {
       <div className="name-number">
         <h3>Name & Number:</h3>
         <ul>
-          {Object.values(NameNumber).map((NameNumberOption, index) => (
-            <li key={index}>{NameNumberOption}</li>
+          {Object.entries(NameNumber).map(([key, nameNumberOption]) => (
+            <li key={key} onClick={() => onNameNumberChange(nameNumberOption)} className={`items ${nameNumberOption ? "active" : ""} ` }>
+              {nameNumberOption}
+            </li>
           ))}
         </ul>
       </div>
