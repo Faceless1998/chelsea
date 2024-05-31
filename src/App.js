@@ -7,6 +7,7 @@ import IMG3 from "./assets/photo3.webp";
 import IMG4 from "./assets/photo4.webp";
 import NewTitle from "./NewTitle";
 import KitTitles from "./KitTitles";
+import Biblusi from "./biblusi/Biblusi";
 
 
 const kits = [
@@ -109,7 +110,7 @@ function App() {
   
   return (
     <>
-      <h1 className="title">Create your own</h1>
+      {/* <h1 className="title">Create your own</h1>
       <div className="tab">
         {
           kits.map((kit) => (
@@ -136,7 +137,9 @@ function App() {
             className="windowsize"          
           />
         </div>
-      </div>
+      </div> */}
+
+      <Biblusi />
     </>
   );
 }
