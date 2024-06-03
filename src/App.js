@@ -8,6 +8,7 @@ import IMG4 from "./assets/photo4.webp";
 import NewTitle from "./NewTitle";
 import KitTitles from "./KitTitles";
 import Biblusi from "./biblusi/Biblusi";
+import Catalog from "./biblusi/Catalog";
 
 
 const kits = [
@@ -139,7 +140,7 @@ function App() {
         </div>
       </div> */}
 
-      <Biblusi />
+      <Catalog />
     </>
   );
 }

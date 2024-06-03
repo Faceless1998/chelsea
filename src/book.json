@@ -1,0 +1,26 @@
+[
+  {
+    "title": "ONE-PUNCH MAN VOL. 05",
+    "image": "IMG1",
+    "stars": 1,
+    "price": 25.99,
+    "sale_status": false,
+    "sale": 16.99
+  },
+  {
+    "title": "ONE-PUNCH MAN VOL. 05",
+    "image": "IMG2",
+    "stars": 1,
+    "price": 25.99,
+    "sale_status": false,
+    "sale": 16.99
+  },
+  {
+    "title": "ONE-PUNCH MAN VOL. 05",
+    "image": "IMG3",
+    "stars": 1,
+    "price": 25.99,
+    "sale_status": false,
+    "sale": 16.99
+  }
+]
