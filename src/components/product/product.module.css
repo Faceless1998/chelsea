@@ -1,0 +1,61 @@
+.products{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.products img{
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+}
+
+.productbox{
+
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+.box{
+    width: 400px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.productbox{
+    width: 1000px;
+}
+
+.prodname{
+    height: 70px;
+    color: black;
+    font-weight: 700;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.prodprice{
+    margin:20px 0;
+    color: red;
+    font-weight: 300;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.productlink{
+    padding: 10px;
+    background-color: blue;
+    border-radius: 50px;
+    margin-bottom:50px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    
+}
