@@ -11,16 +11,40 @@ const ProductDetails = () =>{
         return <div>პროდუქტი ვერ მოიძებნა</div>
     }
 
+let namer
+    if (localStorage.getItem("lang") === "en") {
+        namer = (
+          <div>{option.phoneName} </div>
+        );
+      } else if (localStorage.getItem("lang") === "ge") {
+        namer = (
+          <div>{option.phoneNameGeo} </div>
+        );
+      } else {
+        namer = (
+          <div>{option.phoneNameSp} </div>
+        );
+      }
+
     return(
         <>
             <div>
-                <h1> {option.phoneName} </h1>
+                <h1> {namer} </h1>
                 <img src={option.image} alt={option.phoneName} />
                 <p> {option.price} </p>
             </div>
 
             <div>
-                <Link to="/product">უკან დაბრუნება</Link>
+                <Link to="/product">
+                
+                
+                {localStorage.getItem("lang") === "ge"
+                      ? "უკან დაბრუნება"
+                      : localStorage.getItem("lang") === "en"
+                      ? "Go Back"
+                      : "Devolver"}
+                      
+                      </Link>
             </div>
         </>
     )
