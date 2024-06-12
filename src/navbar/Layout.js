@@ -63,7 +63,7 @@ const Layout = () => {
         </li>
 
         <li>
-          <Link to="/login">შესვლა</Link>
+          <Link to="/login">{t("login")}</Link>
         </li>
 
         <li>

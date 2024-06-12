@@ -7,7 +7,8 @@ const resources = {
       home: "Home",
       about: "About",
       product: "Product",
-      phone : "Telephones"
+      phone : "Telephones",
+      login : "Log In"
     },
   },
 
@@ -16,7 +17,8 @@ const resources = {
       home: "მთავარი",
       about: "ჩვენს შესახებ",
       product: "პროდუქტი",
-      phone : "ტელეფონები"
+      phone : "ტელეფონები",
+      login : "შესვლა"
     },
   },
 
@@ -25,7 +27,8 @@ const resources = {
       home: "hogar",
       about: "sobre",
       product: "producto",
-      phone : "Los Telefonos"
+      phone : "Los Telefonos",
+      login : "Acceso"
     },
   },
 };
