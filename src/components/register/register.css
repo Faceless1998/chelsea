@@ -1,0 +1,78 @@
+body {
+  background: linear-gradient(#7b45b7 0%, #5c78c6 50%, #36b5d8 100%);
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.registration-form {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  background-color: #242156;
+  color: white;
+  padding: 10px 60px;
+  text-align: center;
+  margin: 0;
+}
+
+.form-elements {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  background-color: #2a2a68;
+  padding: 10px 50px;
+  margin: 0;
+}
+
+.form-elements > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.successful {
+  color: green;
+}
+
+.not_successful {
+  color: red;
+}
+
+.message {
+  position: absolute;
+  top: 5px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 50px;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+.message.hidden {
+  opacity: 0;
+}
+
+input {
+  padding: 20px 5px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+}
+
+input:active {
+  outline: 2px solid green;
+}

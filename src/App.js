@@ -4,7 +4,7 @@ import { Home } from "./components/home/Home";
 import { About } from "./components/about/About";
 import { Product } from "./components/product/Product";
 import ProductDetails from "./components/product/ProductDetails";
-
+import Register from "./components/register/Register";
 import Layout from "./navbar/Layout";
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/product" element={ <Product /> } />
         <Route path="/product/:id" element={ < ProductDetails /> } />
-
+        <Route path="/register" element={<Register />} />
       </Routes>
     </>
   );

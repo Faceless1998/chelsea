@@ -61,6 +61,11 @@ const Layout = () => {
         <li>
           <Link to="/product"> {t("product")} </Link>{" "}
         </li>
+
+        <li>
+          <Link to="/register">რეგისტრაცია</Link>
+        </li>
+
         <li>
           <div onClick={closeBox} onMouseEnter={() => toggleBox(1)}>
             {langName}
