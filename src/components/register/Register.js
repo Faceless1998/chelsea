@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import "./register.css";
 import { FaCircleCheck } from "react-icons/fa6";
-import { FaSkullCrossbones } from "react-icons/fa";
-
+import { FaSkullCrossbones } from "react-icons/fa6";
+import "./register.css";
+import { Link } from "react-router-dom";
 const Register = () => {
-  const [formDate, setFormData] = useState({
+  const [formData, setFormData] = useState({
     username: "",
     email: "",
     password: "",
@@ -14,15 +14,13 @@ const Register = () => {
   const [passwordStrength, setPasswordStrength] = useState("");
 
   const [message, setMessage] = useState("");
-
   const [success, setSuccess] = useState(false);
-
   const [showMessage, setShowMessage] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
-      ...formDate,
+      ...formData,
       [name]: value,
     });
 
@@ -36,7 +34,7 @@ const Register = () => {
     if (password.length < 8) {
       strength = "Weak";
     } else if (password.length < 12) {
-      strength = "Medium";
+      strength = "Avarage";
     } else {
       strength = "Strong";
     }
@@ -45,18 +43,17 @@ const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    const { username, email, password, confirmPassword } = formDate;
+    const { username, email, password, confirmPassword } = formData;
 
     if (!username || !email || !password || !confirmPassword) {
-      setMessage("შეიტანეთ ყველა მონაცემი");
+      setMessage("ყველა ველი უნდა შეავსოთ!!!");
       setSuccess(false);
       showMessageTemporary();
       return;
     }
 
     if (!isPasswordValid(password)) {
-      setMessage("შეიყვანეთ ძლიერი პაროლი");
+      setMessage("შეიყვანეთ სწორი პაროლი");
       setSuccess(false);
       showMessageTemporary();
       return;
@@ -69,90 +66,85 @@ const Register = () => {
       return;
     }
 
-    if (passwordStrength === "Weak") {
-      setMessage("სუსტი პაროლი");
-      setSuccess(false);
-      showMessageTemporary();
-      return;
-    }
-
-    setMessage("წარმატებით დარეგისტრირდით");
-    showMessageTemporary();
-
+    setMessage("რეგისტრაცია წარმატებით დასრულდა");
     setSuccess(true);
+    showMessageTemporary();
   };
 
   const isPasswordValid = (password) => {
-    const passwordRegEx =
-      /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/;
-    return passwordRegEx.test(password);
+    const passwordRegex =
+      /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
+    return passwordRegex.test(password);
   };
 
-  const showMessageTemporary = () => {
+  const showMessageTemporary = () =>{
     setShowMessage(true);
-    setTimeout(() => {
+    setTimeout(() =>{
       setShowMessage(false);
-    }, 3000);
-  };
+    },3000)
+  }
 
   return (
-    <section>
+    <div className="registration-form">
       <h2>რეგისტრაცია</h2>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <input
+            type="text"
+            name="username"
+            value={formData.username}
+            onChange={handleChange}
+            placeholder="ზედმეტსახელი"
+          />
+        </div>
 
-      <div className="registration-form">
-        <form className="form-elements" onSubmit={handleSubmit}>
-          <div>
-            <input
-              type="text"
-              name="username"
-              placeholder="Username"
-              onChange={handleChange}
-            />
-          </div>
+        <div>
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="მეილი"
+          />
+        </div>
 
-          <div>
-            <input
-              type="email"
-              name="email"
-              placeholder="Email"
-              onChange={handleChange}
-            />
-          </div>
+        <div>
+          <input
+            type="password"
+            name="password"
+            value={formData.password}
+            onChange={handleChange}
+            placeholder="პაროლი"
+          />
+        </div>
 
-          <div>
-            <input
-              type="password"
-              name="password"
-              placeholder="Password"
-              onChange={handleChange}
-            />
-          </div>
+        <div>
+          <input
+            type="password"
+            name="confirmPassword"
+            value={formData.confirmPassword}
+            onChange={handleChange}
+            placeholder="გაიმეორეთ პაროლი"
+          />
+        </div>
+        <button type="submit">რეგისტრაცია</button>
+      </form>
+      
+      <Link to="/login">გაქვთ ანგარიში?</Link>
 
-          <div>
-            <input
-              type="password"
-              name="confirmPassword"
-              placeholder="Confirm Password"
-              onChange={handleChange}
-            />
+      {message &&
+        (success ? (
+          <div className={`message ${!showMessage ? 'hidden' : ''}`}>
+            <FaCircleCheck className="check" />
+            {message}
           </div>
-          <button type="submit">რეგისტრაცია</button>
-        </form>
-        {message && (
-          <div className={`message ${!showMessage ? "hidden" : ""}`}>
-            {success ? (
-              <div className="successful">
-                <FaCircleCheck /> {message}{" "}
-              </div>
-            ) : (
-              <div className="not_successful">
-                <FaSkullCrossbones /> {message}
-              </div>
-            )}
+        ) : (
+          <div className={`message ${!showMessage ? 'hidden' : ''}`}>
+            <FaSkullCrossbones className="uncheck" />
+            {message}
           </div>
-        )}
-      </div>
-    </section>
+        ))}
+    </div>
   );
 };
 

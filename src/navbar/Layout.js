@@ -63,7 +63,7 @@ const Layout = () => {
         </li>
 
         <li>
-          <Link to="/register">რეგისტრაცია</Link>
+          <Link to="/login">შესვლა</Link>
         </li>
 
         <li>
