@@ -2,14 +2,15 @@
     width: 30px;
 }
 
-.nav ul{
+.nav .nav-ul{
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 40px;
     list-style-type: none;
 }
 
-.nav ul li > *{
+.nav .nav-ul li > *{
     text-decoration: none;
     color: black;
     font-weight: 700;

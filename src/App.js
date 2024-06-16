@@ -7,6 +7,7 @@ import ProductDetails from "./components/product/ProductDetails";
 import Register from "./components/register/Register";
 import Layout from "./navbar/Layout";
 import Login from "./components/login/Login";
+import Search from "./components/search/Search";
 function App() {
   return (
     <>
@@ -19,6 +20,7 @@ function App() {
         <Route path="/product/:id" element={ < ProductDetails /> } />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/search" element={<Search />} />
       </Routes>
     </>
   );

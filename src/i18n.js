@@ -8,7 +8,8 @@ const resources = {
       about: "About",
       product: "Product",
       phone : "Telephones",
-      login : "Log In"
+      login : "Log In",
+      search: "Search"
     },
   },
 
@@ -18,7 +19,8 @@ const resources = {
       about: "ჩვენს შესახებ",
       product: "პროდუქტი",
       phone : "ტელეფონები",
-      login : "შესვლა"
+      login : "შესვლა",
+      search : "ძებნა"
     },
   },
 
@@ -28,7 +30,8 @@ const resources = {
       about: "sobre",
       product: "producto",
       phone : "Los Telefonos",
-      login : "Acceso"
+      login : "Acceso",
+      search: "El Sercho"
     },
   },
 };

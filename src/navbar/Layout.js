@@ -8,6 +8,7 @@ import GEO from "./../assets/georgia.jpg";
 import SP from "./../assets/spain.jpg";
 
 import { useTranslation } from "react-i18next";
+import Search from "../components/search/Search";
 
 const Layout = () => {
   const [openBox, setOpenBox] = useState(null);
@@ -51,7 +52,7 @@ const Layout = () => {
 
   return (
     <div className="nav">
-      <ul>
+      <ul className="nav-ul">
         <li>
           <Link to="/"> {t("home")} </Link>{" "}
         </li>
@@ -64,6 +65,9 @@ const Layout = () => {
 
         <li>
           <Link to="/login">{t("login")}</Link>
+        </li>
+        <li>
+          <Search />
         </li>
 
         <li>

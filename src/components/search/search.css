@@ -1,0 +1,31 @@
+.search-container {
+    max-width: 300px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .list {
+    list-style-type: none;
+    padding-left: 0;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-bottom: 0;
+
+  }
+  
+  .list-item {
+    padding: 0 0 0 10px;
+    border: 1px solid #ddd;
+  }
+  
