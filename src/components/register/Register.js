@@ -12,7 +12,7 @@ const Register = () => {
   });
 
   const [passwordStrength, setPasswordStrength] = useState("");
-
+console.log(passwordStrength);
   const [message, setMessage] = useState("");
   const [success, setSuccess] = useState(false);
   const [showMessage, setShowMessage] = useState(false);
