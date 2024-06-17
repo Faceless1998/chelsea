@@ -7,7 +7,6 @@ export const Options = [
     phoneName: "Samsung Galaxy A15 128GB Black",
     phoneNameGeo: "Samsung Galaxy A15 128GB შავი",
     phoneNameSp: "Samsung Galaxy A15 128GB negro",
-
     image: IMG1,
     price: 449.99,
   },

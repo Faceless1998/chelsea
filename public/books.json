@@ -1,27 +1,47 @@
 [
-    {
-        "id":1,
-        "title":"To Kill A Mockingbird",
-        "author":"Harper Lee"
-    },
-    {
-        "id":2,
-        "title":"1984",
-        "author":"George Orwell"
-    },
-    {
-        "id":3,
-        "title":"The Great Getsby",
-        "author":"F. Scott Fitzgerald"
-    },
-    {
-        "id":4,
-        "title":"Pride And Prejudice",
-        "author":"Jane Austen"
-    },
-    {
-        "id":5,
-        "title":"is Him A Man?!",
-        "author":"Ilia Chavchavadze"
-    }
+  {
+    "id": 1,
+    "title": "To Kill A Mockingbird",
+    "titlegeo": "ნუ მოკლავ ჯაფარას",
+    "titlesp": "El Killo Jafarius",
+    "author": "Harper Lee",
+    "authorgeo": "ჰარპერ ლი",
+    "authorsp": "Harper Lee"
+  },
+  {
+    "id": 2,
+    "title": "1984",
+    "titlegeo": "1984",
+    "titlesp": "El 1984",
+    "author": "George Orwell",
+    "authorgeo": "ჯორჯ ორუელი",
+    "authorsp": "George Orwell"
+  },
+  {
+    "id": 3,
+    "title": "The Great Getsby",
+    "titlegeo": "დიდი გეტსბი",
+    "titlesp": "El Grande Getsby",
+    "author": "F. Scott Fitzgerald",
+    "authorgeo": "სკოტ ფიცჯერალდი",
+    "authorsp": "F. Scott Fitzgerald"
+  },
+  {
+    "id": 4,
+    "title": "Pride And Prejudice",
+    "titlegeo": "სიამაყე და სასჯელი",
+    "titlesp": "El Prido i El Prejudico",
+    "author": "Jane Austen",
+    "authorgeo": "ჯეინ ოსტინი",
+    "authorsp": "Jane Austen"
+  },
+  {
+    "id": 5,
+    "title": "is Him A Man?!",
+    "titlegeo": "კაცია-ადამიანი?!",
+    "titlesp": "El Mano Que El Humano?!",
+    "author": "Ilia Chavchavadze",
+    "authorgeo": "ილია ჭავჭავაძე",
+    "authorsp": "Ilia Chavchavadze"
+  }
 ]

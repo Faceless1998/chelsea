@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import "./app.css"
+import "./app.css";
 import { Home } from "./components/home/Home";
 import { About } from "./components/about/About";
 import { Product } from "./components/product/Product";
@@ -8,6 +8,8 @@ import Register from "./components/register/Register";
 import Layout from "./navbar/Layout";
 import Login from "./components/login/Login";
 import Search from "./components/search/Search";
+import BookDetails from "./components/search/BookDetails";
+
 function App() {
   return (
     <>
@@ -16,11 +18,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/product" element={ <Product /> } />
-        <Route path="/product/:id" element={ < ProductDetails /> } />
+        <Route path="/product" element={<Product />} />
+        <Route path="/product/:id" element={<ProductDetails />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/search" element={<Search />} />
+        <Route path="/books/:id" element={<BookDetails />} />
       </Routes>
     </>
   );

@@ -35,7 +35,6 @@ export const Product = () => {
                         : localStorage.getItem("lang") === "en"
                         ? "more"
                         : "en detalle"}
-                        
                     </Link>
                   </div>
                 </div>
